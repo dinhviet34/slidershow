@@ -17,7 +17,7 @@ var fs = require('fs')
 app.post("/src",function(req,res){
     try{
         var data = fs.readFileSync('src/src.txt','utf-8');
-        var lines = data.split('\r\n');
+        var lines = data.split('|');
         var arrayobject = new Array();
         for(i in lines){
             if(lines[i] !== ''){
